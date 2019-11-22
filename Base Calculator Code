@@ -1,0 +1,106 @@
+package first_GUI;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame();
+		
+		frame.setTitle("Calculator");
+		frame.setSize(215, 300);
+		frame.setLocation(250,300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		FlowLayout flow = new FlowLayout();
+		frame.setLayout(flow);
+		
+		JLabel intro = new JLabel();
+		intro.setText("                                       Caculator                                       ");
+		intro.setSize(300, 50);
+		intro.setFont(intro.getFont().deriveFont(15f));
+		intro.setForeground(Color.black);
+		
+		JLabel intro3 = new JLabel();
+		intro3.setText("                                                                                                                                  ");
+		intro3.setSize(300, 50);
+		intro3.setFont(intro.getFont().deriveFont(15f));
+		intro3.setForeground(Color.black);
+		
+		JLabel intro2 = new JLabel(); 
+		intro2.setText("                                                                                          DISPLAY LINE                                           ");
+		intro2.setSize(300, 50);
+		intro2.setFont(intro.getFont().deriveFont(8f));
+		
+		frame.add(intro);
+		frame.add(intro3);
+		frame.add(intro2);
+		
+		
+		JButton one = new JButton("1");
+	    
+		JButton two = new JButton("2"); 
+		
+		JButton three = new JButton("3");
+	    
+		JButton four = new JButton("4"); 
+	    
+		JButton five = new JButton("5");
+	    
+		JButton six = new JButton("6");
+	    
+		JButton seven = new JButton("7");
+	    
+		JButton eight = new JButton("8");
+	    
+		JButton nine = new JButton("9");
+	    
+		JButton zero = new JButton("0");
+	    
+		JButton back = new JButton("<-");
+	    
+		JButton div = new JButton("/");
+	    
+		JButton multi = new JButton("*");
+	    
+		JButton sub = new JButton("-");
+	    
+		JButton add = new JButton("+");
+		
+		JButton period = new JButton(".");
+	    
+		JButton equal = new JButton("=");
+		
+		frame.add(seven);
+		frame.add(eight);
+		frame.add(nine);
+		frame.add(div);
+		
+		frame.add(four);
+		frame.add(five);
+		frame.add(six);
+		frame.add(multi);
+		
+		frame.add(one);
+		frame.add(two);
+		frame.add(three);
+		frame.add(sub);
+		
+		frame.add(zero);
+		frame.add(period);
+		frame.add(equal);
+		frame.add(add);
+		
+		frame.add(back);
+		
+		
+		frame.setVisible(true);
+		
+
+	}
+	
+
+}
+
+
