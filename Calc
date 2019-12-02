@@ -1,0 +1,304 @@
+package first_GUI;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Calc implements ActionListener{
+	JLabel intro;
+	JLabel intro3;
+	JLabel screen;
+	
+	JButton one = new JButton("1");
+	JButton two = new JButton("2"); 
+	JButton three = new JButton("3");
+	JButton four = new JButton("4"); 
+	JButton five = new JButton("5");
+	JButton six = new JButton("6");
+	JButton seven = new JButton("7");
+	JButton eight = new JButton("8");
+	JButton nine = new JButton("9");
+	JButton zero = new JButton("0");
+	JButton clear = new JButton("C");
+	JButton div = new JButton("/");
+	JButton multi = new JButton("*");
+	JButton sub = new JButton("-");
+	JButton add = new JButton("+");
+	JButton period = new JButton(".");
+	JButton equal = new JButton("=");
+	String display = "0";
+	String opperator;
+	int number_1;
+	int number_2;
+	
+	public Calc() {
+		
+		JFrame frame = new JFrame();
+		
+		frame.setTitle("Calculator");
+		frame.setSize(215, 300);
+		frame.setLocation(250,300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel contentPane = (JPanel)frame.getContentPane();
+		
+
+		
+		one.addActionListener(this);
+		two.addActionListener(this);
+		three.addActionListener(this);
+		four.addActionListener(this);
+		five.addActionListener(this);
+		six.addActionListener(this);
+		seven.addActionListener(this);
+		eight.addActionListener(this);
+		nine.addActionListener(this);
+		zero.addActionListener(this);
+		
+		add.addActionListener(this);
+		sub.addActionListener(this);
+		multi.addActionListener(this);
+		div.addActionListener(this);
+		
+		period.addActionListener(this);
+		equal.addActionListener(this);
+		clear.addActionListener(this);
+		
+		frame.setVisible(true);
+		
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		
+		if (e.getSource() == one) {
+			if (display == "0") {
+				display += "1";
+			}
+			else {
+			display += "1";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+			
+		}
+		
+		if (e.getSource() == two) {
+			if (display == "0") {
+				display += "2";
+			}
+			
+			else {
+			display += "2";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+		}
+		
+		
+		if (e.getSource() == three) {
+			if (display == "0") {
+				display += "3";
+			}
+			
+			else {
+			display += "1";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == four) {
+			if (display == "0") {
+				display += "4";
+			}
+			
+			else {
+			display += "d";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == five) {
+			if (display == "0") {
+				display += "5";
+			}
+			
+			else {
+			display += "5";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == six) {
+			if (display == "0") {
+				display += "6";
+			}
+			
+			else {
+			display += "6";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == seven) {
+			if (display == "0") {
+				display += "7";
+			}
+			
+			else {
+			display += "7";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == eight) {
+			if (display == "0") {
+				display += "8";
+			}
+			
+			else {
+			display += "8";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == nine) {
+			if (display == "0") {
+				display += "9";
+			}
+			
+			else {
+			display += "9";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == zero) {
+			if (display == "0") {
+				display += "0";
+			}
+			
+			else {
+			display += "0";
+			screen.setText(display);
+			}
+			
+			screen.setText(display);
+		}
+		
+		
+		if (e.getSource() == add) {
+			opperator = "+";
+			number_1 = Integer.parseInt(display);
+			display = "0";
+			screen.setText(display);
+		}
+		
+		
+		if (e.getSource() == sub) {
+			opperator = "-";
+			number_1 = Integer.parseInt(display);
+			display = "0";
+			screen.setText(display);
+		}
+		
+		
+		if (e.getSource() == multi) {
+			opperator = "*";
+			number_1 = Integer.parseInt(display);
+			display = "0";
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == div) {
+			opperator = "/";
+			number_1 = Integer.parseInt(display);
+			display = "0";
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == clear) {
+			display = "0";
+			number_1 = 0;
+			number_2 = 0;
+			opperator = "";
+			screen.setText(display);
+		}
+		
+		if (e.getSource() == equal) {
+			number_2 = Integer.parseInt(display);
+			double total;
+			
+			if (opperator == "+") {
+				total = number_1 + number_2;
+				display = Double.toString(total);
+			}
+			
+			if (opperator == "-") {
+				total = number_1 - number_2;
+				display = Double.toString(total);
+			}
+			
+			if (opperator == "-") {
+				total = number_1 - number_2;
+				display = Double.toString(total);
+			}
+			
+			if (opperator == "*") {
+				total = number_1 * number_2;
+				display = Double.toString(total);
+			}
+			
+			if (opperator == "/") {
+				if (number_2 == 0) {
+					display = "undefined - cannot divid by 0";
+				}
+				
+				else {
+				total = number_1 * number_2;
+				display = Double.toString(total);
+			}
+			
+			screen.setText(display);
+		}
+		}
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		new Calculator();
+		
+
+	}
+	
+	
+	
+}
+
+/* Decimal 
+ * -can not have more then one decimal point
+ * -have to change numbers to double
+ * -
+ * 
+ */
+	
+
