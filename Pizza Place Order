@@ -1,0 +1,53 @@
+package pizza_place;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class Pizza_Place {
+	//widgets
+	JFrame frame;
+	JPanel main;
+	JPanel customer_name;
+	JTextField name_field;
+	
+	//data
+	String name;
+
+	public Pizza_Place() {
+		frame = new JFrame(" Pizza Place ");
+		frame.setSize(900, 500);
+		frame.setLocation(200,300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		main = (JPanel)frame.getContentPane();
+		
+		BoxLayout boxLayout = new BoxLayout(main, BoxLayout.Y_AXIS);
+		main.setLayout(boxLayout);
+		
+		customer_name = new JPanel();
+		customer_name.setLayout(new FlowLayout());
+		
+		//customer_name panel set up
+		JLabel name_label = new JLabel("Customer Name: ");
+		name_field = new JTextField(40);
+		customer_name.add(name_label);
+		customer_name.add(name_field);
+		
+		main.add(customer_name);
+		
+		frame.pack();
+		
+		frame.setVisible(true);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		new Pizza_Place();
+	}
+	
+	
+}
+
+
